@@ -7,7 +7,7 @@ Sistema distribuído de gerenciamento e distribuição de promoções, implement
 ## Arquitetura
 
 ```
-                        ┌─────────────────────────────────────────────┐
+                        ┌──────────────────────────────────────────────┐
                         │              Exchange: Promocoes             │
                         │              (type: topic, durable)          │
                         └──────────┬──────────────┬────────────────────┘
