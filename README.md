@@ -8,15 +8,15 @@ Sistema distribuído de gerenciamento e distribuição de promoções, implement
 
 ```
                         ┌─────────────────────────────────────────────┐
-                        │              Exchange: Promocoes              │
+                        │              Exchange: Promocoes             │
                         │              (type: topic, durable)          │
                         └──────────┬──────────────┬────────────────────┘
                                    │              │
               promocao.recebida ───┘              └─── promocao.voto
                      │                                       │
             ┌────────▼────────┐                   ┌──────────▼──────────┐
-            │   MS Promoção   │                   │     MS Ranking       │
-            │ (Fila_Promocao) │                   │   (Fila_Ranking)     │
+            │   MS Promoção   │                   │     MS Ranking      │
+            │ (Fila_Promocao) │                   │   (Fila_Ranking)    │
             └────────┬────────┘                   └──────────┬──────────┘
                      │                                       │
         promocao.publicada                        promocao.destaque
